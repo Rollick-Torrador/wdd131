@@ -1,131 +1,101 @@
-/* ====== Outer container ====== */
-#form-grid{
-  width: 550px;
-  background: white;
-  padding: 24px;
-  box-sizing: border-box;
-}
-
-/* ====== OUTER GRID (Form Grid) ====== */
-#card-details{
+#formGrid {
   display: grid;
-  height: 250px;
-  width: 100%;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 2.5fr 1fr;
   grid-template-rows: 1fr 3fr 1fr 1fr;
-  gap: 0;
-  position: relative;
-  box-sizing: border-box;
+  margin: 10%;
+  height: 250px;
+  width: 400px;
 }
-
-/* ====== Front card: OUTER placement + INNER grid ====== */
-#front-card{
+#front-card {
   grid-column: 1 / 3;
   grid-row: 1 / 3;
   z-index: 2;
-
   background: lightgrey;
-  border-radius: 4px;
-  box-shadow: 0 6px 10px rgba(0,0,0,.25);
-
-  transform: translate(10px, -10px);
-
-  /* INNER grid */
-  display: grid;
-  padding: 14px;
-  box-sizing: border-box;
-  gap: 10px;
-
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto auto auto;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px slategrey;
 }
-
-/* Front card children */
-.total{
-  grid-column: 1 / 2;
-  grid-row: 1;
-  margin: 0;
-}
-
-.chip{
-  grid-column: 2 / 3;
-  grid-row: 1;
-  justify-self: end;
-
-  width: 50px;
-  height: 32px;
-  background: #c9c9c9;
-  border-radius: 6px;
-}
-
-.card-number{
-  grid-column: 1 / -1;
-  grid-row: 2;
-}
-
-.card-holder{
-  grid-column: 1 / 2;
-  grid-row: 3;
-}
-
-.expiration{
-  grid-column: 2 / 3;
-  grid-row: 3;
-}
-
-.exp-row{
-  display: flex;
-  gap: 8px;
-}
-
-/* ====== Back card: OUTER placement + INNER grid ====== */
-#back-card{
+#back-card {
   grid-column: 2 / 4;
   grid-row: 2 / 4;
   z-index: 1;
-
   background: lightgrey;
-  border-radius: 4px;
-  box-shadow: 0 6px 10px rgba(0,0,0,.25);
-
-  transform: translate(40px, 10px);
-
-  /* INNER grid */
-  display: grid;
-  padding: 14px;
-  box-sizing: border-box;
-  gap: 10px;
-
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto 1fr auto;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px slategrey;
 }
-
-/* Back card children */
-.magstripe{
-  grid-column: 1 / -1;
-  grid-row: 1;
-
-  height: 42px;
-  background: #2b2b2b;
-  border-radius: 4px;
-}
-
-.cvv{
-  grid-column: 2 / 3;
-  grid-row: 3;
-  align-self: end;
-}
-
-/* ====== Submit button placement ====== */
-#submit-btn{
+button {
+  margin: 10px;
   grid-column: 3 / 4;
   grid-row: 4 / 5;
-  z-index: 3;
-
-  justify-self: end;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px slategrey;
+}
+.front-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: 10px;
+}           
+.back-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 2fr 1fr 2fr;
+  margin: 10px 0;
+}
+.total {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  place-self: start start;
+}
+.chip {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  place-self: start end;
+  padding-top: 15px;
+}
+.chip img {
+  width: 40px;
+  height: 25px;
+  display: block;
+}
+#cardNumber {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  place-self: start start;
+}
+#cardHolder {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  place-self: start start;
+}
+#cardNumber input, #cardHolder input {
+  width: 85%;
+}
+#cardExpiration {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+#cardExpiration input {
+  width: 2.5rem;        /* cap (adjust to taste) */
+  max-width: 100%;
+  box-sizing: border-box;
+  display: inline-block; /* ensures they can sit side-by-side */
+  vertical-align: top;
+}
+#magstrip {
+  background: black;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+#cvv {
+  grid-column: 2 / 3;
+  grid-row: 3/4;
+  width: 3rem;
   align-self: end;
-
-  margin: 0.5rem;
-  padding: 8px 16px;
-  border-radius: 4px;
+}
+#cvv label {
+  display: block;
+  width: 100%;
+}
+#cvv input {
+  width: 3rem;
 }

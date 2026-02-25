@@ -3,52 +3,69 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="icon" href="data:image/svg+xml,
-            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-            <text y='.9em' font-size='90'>💳</text>
-            </svg>">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
-        rel="stylesheet">
+        <title>Credit Card</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <link rel="stylesheet" href="styles.css">
         <script src="script.js" defer></script>
     </head>
     <body>
-        <main id="form-grid">
-            <form id="card-details" action="#" method="get">
-                <!-- Front card -->
-                <section id="front-card" class="card-front-grid">
-                    <p class="total">TOTAL: $199</p>
-                    <div class="chip" aria-hidden="true"></div>
-
-                    <div class="card-number">
-                    <label for="cardnumber">CARD NUMBER</label>
-                    <input type="text" id="cardnumber" name="cardnumber" placeholder="1234 6578 9101 1025" required>
+        <main>
+            <section>
+                <section class="errors"></section>
+                <form id="formGrid" action="#" method="get">    
+                    <div id="front-card">
+                        <div class="front-grid">
+                            <p class="total">TOTAL: $190</p>
+                            <div class="chip" aria-hidden="true">
+                                <img src="images/credit-card-chip.png">
+                            </div>
+                            <div id="cardNumber">
+                                <label for="cardnumber">CARD NUMBER</label>
+                                <input type="text" 
+                                id="cardnumber" 
+                                name="cardnumber" 
+                                placeholder="1234 6578 9101 1025" 
+                                required>
+                            </div>
+                            <div id="cardHolder">
+                                <label for="cardholder">CARD HOLDER</label>
+                                <input type="text" 
+                                id="cardholder" 
+                                name="cardholder" 
+                                placeholder="John Doe" 
+                                required>
+                            </div>  
+                            <div id="cardExpiration">
+                                <span id="expirationLabel">EXPIRATION</span>
+                                <input type='text' 
+                                id='month' 
+                                name="expMonth" 
+                                placeholder="MM" 
+                                aria-labelledby="expirationLabel" 
+                                aria-label="Expiration Month"
+                                required>
+                                <input type='text' 
+                                id='year' 
+                                name="expYear" 
+                                placeholder="YY" 
+                                aria-labelledby="expirationLabel" 
+                                aria-label="Expiration Year"
+                                required>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="card-holder">
-                    <label for="cardholder">CARD HOLDER</label>
-                    <input type="text" id="cardholder" name="cardholder" placeholder="John Doe" required>
+                    <div id="back-card">
+                        <div class="back-grid">
+                            <div id="magstrip"></div>
+                            <div id="cvv">
+                            <label for="cvvInput">CVC/CVV</label>
+                            <input id="cvvInput" name="cvv" type="text" placeholder="xxx">
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="expiration">
-                    <label id="expirationDate">EXPIRATION</label>
-                    <div class="exp-row">
-                        <input type="text" id="month" name="expMonth" placeholder="MM" aria-labelledby="expirationDate">
-                        <input type="text" id="year" name="expYear" placeholder="YY" aria-labelledby="expirationDate">
-                    </div>
-                    </div>
-                </section>
-                <!-- Back card -->
-                <section id="back-card" class="card-back-grid">
-                    <div class="magstripe"></div>
-                    <div class="cvv">
-                        <label for="cvv">CVC/CVV</label>
-                        <input id="cvv" name="cvv" type="text" placeholder="xxx">
-                    </div>
-                </section>
-                <button id="submit-btn" type="submit">Submit</button>
-            </form>
+                    <button>Submit</button>
+                </form>    
+            </section>
         </main>
     </body>
 </html>
