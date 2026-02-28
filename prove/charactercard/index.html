@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Card</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rusty Character Card">
+    <meta property="og:description" 
+    content="A character card for Rusty, the Pathfinder 2E automaton.">
+    <meta property="og:url" 
+    content="https://Rollick-Torrador.github.io/wdd131_dynamic_web_fundamentals/prove/charactercard/index.html">
+    <meta property="og:image" content="images/character-card.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="images/character-card.png">
+    <meta name="twitter:title" content="Rusty Character Card">
+    <meta name="twitter:description" content="A character card for Rusty, the Pathfinder 2E automaton.">
+    <meta name="twitter:image" content="https://yourURLofSocialPreviewImageHere.png">
+
+    <!-- One favicon (ICO works everywhere) -->
+    <link rel="icon" href="images/rusty-favicon.png">
+
+    <!-- One Apple Touch Icon (iOS home screen) -->
+    <link rel="apple-touch-icon" href="/images/apple-touch-image.png">
+</head>
+    <body>
+        <main>
+            <section class="card" aria-label="Character card">
+                <img class="image" src="" alt="" />
+                
+                <header class="name"></header>
+                
+                <div class="stats">
+                    <p class="stat class"></p>
+                    <p class="stat level"></p>
+                    <p class="stat health"></p>
+                </div>
+                <div class="buttons">
+                    <button id="attacked" type="button">Attacked</button>
+                    <button id="levelUp" type="button">Level Up</button>
+                    <button id="reset" type="button" hidden>Fight Again</button>
+                </div>
+                <p class="message" aria-live="polite"></p>
+            </section>
+        </main>    
+    </body>
+</html>
