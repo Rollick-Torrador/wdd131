@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo-link" href="home.html">
+        <img class="logo" src="images/logo-blue.png" alt="Moore To Love Logo">
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">
+        Menu
+      </button>
+
+      <nav class="main-nav" id="siteNav" aria-label="Main navigation"></nav>
+    </header>
+
+    <main class="contact-us-main">
+      <img class="top-contact-image" src="images/couple-on-phone.png" alt="Couple talking on the phone">
+
+      <section class="contact-card">
+        <h1>How to Contact Us</h1>
+        <p>Just fill out the box below with your name, number, and your preferred meeting 
+				times, and we’ll reach out to schedule your first appointment. Scheduling is 
+				completely hassle-free. Once your appointment is set, make sure to arrive 15 
+				minutes early before your first appointment to fill out the appropriate paperwork,
+				and your therapist will be right with you. We look forward to joining you on your
+				self-improvement journey.</p>
+      </section>
+
+      <section class="info-card">
+        <h2>Information Needed</h2>
+        <p>
+          Please include your name, your partner’s name if applicable, your phone or email,
+          your availability, and whether you have a preferred therapist. If you have any 
+          special needs or would like to inform us of any considerations ahead of time, please 
+          include it in the "Message" box. 
+        </p>
+      </section>
+
+      <section class="contact-image-box">
+        <form class="form-fill" id="contactForm" novalidate>
+          <div class="form-row">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="user_name" required>
+          </div>
+
+          <div class="form-row">
+            <label for="partnerName">Partner Name</label>
+            <input type="text" id="partnerName" name="partner_name">
+          </div>
+
+          <div class="form-row">
+            <label for="contactMethod">Email or Phone Number</label>
+            <input type="text" id="contactMethod" name="contact_method" required>
+          </div>
+
+          <div class="form-row">
+            <label for="therapistPreference">Preferred Therapist</label>
+            <select id="therapistPreference" name="therapist_preference">
+              <option value="">No preference</option>
+              <option value="Audrey Moore">Audrey Moore</option>
+              <option value="Shelly Morrison">Shelly Morrison</option>
+              <option value="Jason Conchake">Jason Conchake</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="availability">Preferred Meeting Times</label>
+            <input type="text" id="availability" name="availability" placeholder="Example: Weekdays after 5 PM">
+          </div>
+
+          <div class="form-row">
+            <label for="msg">Message</label>
+            <textarea id="msg" name="user_message" rows="5" required></textarea>
+          </div>
+
+          <p class="form-error" id="formError" aria-live="polite"></p>
+
+          <button class="submit-button" type="submit">Send Your Message</button>
+        </form>
+        <section id="submissionResult" class="submission-preview card hidden" aria-live="polite">
+          <h2>Thank you!</h2>
+          <p>Your message has been submitted. We will contact you soon to set up your appointment.</p>
+          <h3>Your Message Summary</h3>
+          <div id="previewContent"></div>
+        </section>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>Moore To Love &copy; 2018</p>
+
+      <div class="footer-links">
+        <a href="site-plan.html">Site Plan</a>
+        <a href="contact-us.html">Contact Us</a>
+      </div>
+
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/twitter.png" alt="Twitter">
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/instagram.png" alt="Instagram">
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo-link" href="home.html">
+        <img class="logo" src="images/logo-blue.png" alt="Moore To Love Logo">
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">
+        Menu
+      </button>
+
+      <nav class="main-nav" id="siteNav" aria-label="Main navigation"></nav>
+    </header>
+
+    <main class="page-content">
+      <section class="hero">
+        <div class="hero-image">
+          <img src="images/couples-therapy.jpg" alt="Couples in therapy">
+        </div>
+
+        <div class="card hero-text">
+          <h1>What We Do</h1>
+          <p>
+            Moore to Love is a place for people to find a way to connect more deeply
+            with their partner. Whether you have been married for sixty years or dating
+            for a few months, everyone needs the opportunity to work together on
+            themselves and their relationships. Learn about your options, get to know our therapists, and book a 
+          life-changing appointment today.
+          </p>
+        </div>
+      </section>
+
+      <section class="therapists" aria-labelledby="therapists-heading">
+        <h2 id="therapists-heading">Our Therapists</h2>
+        <p class="section-intro">
+          Moore to Love has three main therapists who specialize in different areas of treatment.
+        </p>
+
+        <div class="therapist-buttons" id="therapistButtons" role="tablist" aria-label="Choose a therapist"></div>
+
+        <article class="therapist-card" id="therapistCard" aria-live="polite">
+        </article>
+      </section>
+
+      <section class="home-cta">
+        <a class="button-primary" href="contact-us.html">Contact Us</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Moore To Love &copy; 2018</p>
+
+      <div class="footer-links">
+        <a href="site-plan.html">Site Plan</a>
+        <a href="contact-us.html">Contact Us</a>
+      </div>
+
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/twitter.png" alt="Twitter">
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/instagram.png" alt="Instagram">
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
