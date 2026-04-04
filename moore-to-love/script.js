@@ -74,7 +74,7 @@ function renderTherapistCard(therapist) {
 
   card.innerHTML = `
     <div class="therapist-card-image">
-      <img src="${therapist.image}" alt="${therapist.alt}">
+      <img src="${therapist.image}" alt="${therapist.alt} loading="lazy"">
     </div>
     <div class="therapist-card-content">
       <h3>${therapist.name}</h3>

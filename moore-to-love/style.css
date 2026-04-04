@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fredoka:wght@300..700&family=M+PLUS+Rounded+1c&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&family=Nunito:wght@400;700&display=swap');
 :root {
   --primary-color: #3dc6ef;
   --secondary-color: #808488;
   --accent1-color: #EBDBEF;
   --accent2-color: #ffffff;
 
-  --heading-font: "M PLUS Rounded 1c", Fredoka, sans-serif;
-  --paragraph-font: Nunito, Figtree, Montserrat, sans-serif;
+  --heading-font: "M PLUS Rounded 1c", sans-serif;
+  --paragraph-font: Nunito, sans-serif;
 
   --nav-link-color: #3dc6ef;
   --nav-hover-link-color: #ffffff;
